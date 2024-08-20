@@ -13,7 +13,7 @@ html {
 
 .container div {
   padding: 15px;
-  font-size: 32px;
+  font-size: 48px;
   font-family: Helvetica;
   font-weight: bold;
   color: white;
@@ -25,7 +25,7 @@ html {
 }
 
 .sidebar {
-  background-color: #005B94;
+  background-color: #005b94;
 }
 
 .nav {
@@ -33,7 +33,7 @@ html {
 }
 
 .article {
-  background-color: #7E1DC3;
+  background-color: #7e1dc3;
 }
 
 .footer {
@@ -41,8 +41,57 @@ html {
 }
 
 .article p {
-  font-size: 18px;
+  font-size: 38px;
   font-family: sans-serif;
   color: white;
   text-align: left;
 }
+
+.container {
+  display: grid;
+  grid-template: 200px 200px 1000px 200px / 640px 1920px;
+
+  gap: 15px;
+}
+
+.header,
+.footer {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-column: span 2;
+}
+
+.sidebar {
+  /* grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4; */
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.nav,
+.article {
+  /* grid: 1;  */
+  grid-column: span 1;
+}
+
+/* .header {
+  grid-area: head;
+}
+
+.sidebar {
+  grid-area: side;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.article {
+  grid-area: article;
+}
+
+.footer {
+  grid-area: foot;
+} */
